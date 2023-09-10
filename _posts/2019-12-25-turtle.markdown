@@ -11,4 +11,4 @@ venue: "NYU Shanghai Undergraduate Research Symposium"
 poster: /pdfs/Symposium_poster.jpeg
 ---
 
-Implemented and evaluated in simulation a protocal for optimizing April Tag placement during automatic marker-based navigation of a <a href="https://www.turtlebot.com/turtlebot3/">Turtlebot3 Waffle Pi</a>platform.
+Implemented and evaluated a protocol for optimizing April Tag placement during automatic marker-based navigation of a <a href="https://www.turtlebot.com/turtlebot3/">Turtlebot3 Waffle Pi</a> platform in Gazebo simulation.
