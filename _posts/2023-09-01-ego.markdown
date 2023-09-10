@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "Gaze-Hand-Object Interaction in Egocentric Videos"
+date: 2023-05-27 22:21:59 +00:00
+image: /images/gaze.gif
+categories: research
+author: "Yiming Huang"
+authors: "Principal Investigator: Prof. Jianbo Shi"
+venue: "Ongoing"
+---
+
+Automatic retrieval and 3D reconstruction of interactions between hand, object, and gaze behavior in egocentric and multi-view video data. 

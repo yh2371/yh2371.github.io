@@ -1,0 +1,16 @@
+---
+layout: post
+title:  "PIC Math Program 2022"
+startdate:   01/2020
+enddate: 05/2020
+image: /images/bus.png
+categories: New
+course: " York University and Metropolitan Transit Authority New York City Transit"
+author: "Yiming Huang"
+code: https://github.com/yh2371/BFE-Task-Assignment
+slides: https://vimeo.com/477319081
+subtitle: "Graph-based Automatic Task Assignment System for Bus Fare Evasion Data Collection"
+---
+
+Graph-based Automatic Task Assignment System for Bus Fare Evasion Data Collection.
+

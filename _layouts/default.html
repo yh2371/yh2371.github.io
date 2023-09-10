@@ -1,0 +1,249 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E00L9PT3V9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-E00L9PT3V9');
+  </script>
+  <title>{{ site.name }}</title>
+
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+  <meta name="author" content="{{ site.name }}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  <style>
+    .card .img-top {
+        display: inline;
+    }
+    .card .img-bottom {
+        display: none;
+    }
+    .card:hover .img-bottom {
+        display: inline;
+    }
+    .card:hover .img-top{
+        display: none;
+    }
+  </style>
+
+</head>
+
+<body>
+  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <tr style="padding:0px">
+      <td style="padding:0px">
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr style="padding:0px">
+            <td style="padding:2.5%;width:60%;vertical-align:middle">
+              <h1>
+                Yiming Huang
+              </h1>
+              <p>I'm a second-year master’s student in Robotics at <a href="http://grasp.upenn.edu">GRASP Lab, University of Pennsylvania</a>. I received my bachelor's degree in Mathematics and Computer Science from <a href="https://shanghai.nyu.edu/">NYU Shanghai</a>.
+              </p>
+              <p>
+                My interests revolve broadly around the fields of vision, language, and human-robot interaction with a focus on the perception of human behavior and 3D environments. I am currently working on egocentric vision for the analysis of hand-eye coordination patterns in everyday tasks under the supervision of Prof. <a href="https://www.cis.upenn.edu/~jshi/">Jianbo Shi</a>. I am also working on improving the controllability of text to 3D human motion generation under the supervision of Prof. <a href="https://lingjie0206.github.io/">Lingjie Liu</a> and Prof. <a href="https://www.cis.upenn.edu/~myatskar/">Mark Yatskar</a>.
+              </p>
+
+
+              </p>
+              <h1><img style="width:20%;max-width:20%" alt="profile photo" src="images/hi.png"></h1>
+              <p style="text-align:center">
+                <a href="mailto:ymhuang9@seas.upenn.edu"> Email</a> &nbsp;/&nbsp;
+                <a href="https://github.com/yh2371">GitHub</a> &nbsp;/&nbsp;
+                <!-- <a href="https://scholar.google.com/citations?user=GCYG4GoAAAAJ">Google Scholar</a> &nbsp;/&nbsp; -->
+                <a href="https://www.linkedin.com/in/yiming-huang-927849171/"> LinkedIn </a>
+              </p>
+            </td>
+            <td style="padding:2.5%;width:40%;max-width:40%", class="card">
+              <img style="width:100%;max-width:100%" class = "img-top" alt="profile photo" src="images/profile.jpg">
+              <img style="width:100%;max-width:100%" class = "img-bottom" alt="profile photo" src="images/profile_2.png">
+            </td>
+          </tr>
+        </table>
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:2.5%;width:100%;vertical-align:middle">
+              <h2>Research</h2> 
+            </td>
+          </tr>
+        </table>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+
+          {% for post in site.posts %}
+          {% for cat in post.categories %}
+          {% if cat == 'research' %}
+          <tr>
+            <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
+              <img src="{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
+            </td>
+            <td style="padding:2.5%;width:75%;vertical-align:middle">
+              <h3>{{post.title}}</h3>
+              
+              {% if post.authors %}
+              <br>
+              {{post.authors}}
+              {% endif %}
+              <br>
+             
+              <em>{{post.venue}}</em>
+              {% if post.startdate %}, {{ post.startdate | date: "%Y" }}{% endif %}
+              
+              <br>
+              {% if post.arxiv %}
+              <a href="{{post.arxiv}}">arxiv</a> /
+              {% endif %}
+              {% if post.video %}
+              <a href="{{post.video}}">video</a> /
+              {% endif %}
+              {% if post.code %}
+              <a href="{{post.code}}">code</a> /
+              {% endif %}
+              {% if post.poster %}
+              <a href="{{post.poster}}">poster</a> /
+              {% endif %}
+              {% if post.slides %}
+              <a href="{{post.slides}}">slides</a> /
+              {% endif %}
+              {% if post.website %}
+              <a href="{{post.website}}">website</a> /
+              {% endif %}
+              {% if post.youtube %}
+              <a href="{{post.youtube}}">youtube</a> /
+              {% endif %}
+              <p></p>
+              {{ post.excerpt }}
+            </td>
+          </tr>
+          {% endif %}
+          {% endfor %}
+          {% endfor %}
+        </table>
+        <br>
+        <br>
+        <br>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:2.5%;width:100%;vertical-align:middle">
+              <h2>Projects</h2>
+            </td>
+          </tr>
+        </table>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+
+          {% for post in site.posts %}
+          {% for cat in post.categories %}
+          {% if cat != 'research' and cat != 'Intel' %}
+          <tr>
+            <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
+              <img src="{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
+            </td>
+            <td style="padding:2.5%;width:75%;vertical-align:middle">
+              <h3>{{post.title}}</h3>
+              <br>
+              <em>{{post.categories}} {{post.course}}</em>
+              <br>
+              {{ post.startdate | date: "%m/%Y" }} - {{ post.enddate | date: "%m/%Y"}}
+
+              <br>
+              {% if post.website %}
+              <a href="{{post.website}}">website</a> /
+              {% endif %}
+              {% if post.paper %}
+              <a href="{{post.paper}}">paper</a> /
+              {% endif %}
+              {% if post.patent %}
+              <a href="{{post.patent}}">patent</a> /
+              {% endif %}
+              {% if post.patent2 %}
+              <a href="{{post.patent2}}">patent #2</a> /
+              {% endif %}
+              {% if post.patent3 %}
+              <a href="{{post.patent3}}">patent #3</a> /
+              {% endif %}
+              {% if post.video %}
+              <a href="{{post.video}}">video</a> /
+              {% endif %}
+              {% if post.video2 %}
+              <a href="{{post.video2}}">video #2</a> /
+              {% endif %}
+              {% if post.code %}
+              <a href="{{post.code}}">code</a> /
+              {% endif %}
+              {% if post.poster %}
+              <a href="{{post.poster}}">poster</a> /
+              {% endif %}
+              {% if post.slides %}
+              <a href="{{post.slides}}">slides</a> /
+              {% endif %}
+              <p></p>
+              {{ post.excerpt }}
+            </td>
+          </tr>
+          {% endif %}
+          {% endfor %}
+          {% endfor %}
+        </table>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:2.5%;width:100%;vertical-align:middle">
+              <h2>Teaching</h2> 
+              <p><strong>Graduate Teaching Assistant at the University of Pennsylvania:</strong></p>
+              <li>Fall 2023, Spring 2022, Fall 2022: CIT5900 Programming Languages and Techniques</li>
+              <li>Fall 2023, Spring 2022: CIS4190/5190 Applied Machine Learning</li>
+              <li>Summer 2023: ESE 5410 Machine Learning for Data Science</li>
+      
+              <p><strong>Course Development at the University of Pennsylvania</strong>:</p>
+              <li>EAS 5740 How to Use Data</li>
+      
+              <p><strong>Undergraduate Teaching Assistant at NYU Shanghai</strong></p>
+              <li>Summer 2022, Spring 2019: CSCI-SHU 101 Intro to Computer Science</li>
+              <li>Spring 2022: CSCI-SHU 220 Algorithms</li>
+              <li>Spring 2022, Fall 2021: CSCI-SHU 2314 Discrete Mathematics</li>
+              <li>Fall 2021, Fall 2018: CSCI-UA 9002/CSCI-SHU 11 Intro to Computer Programming</li>
+              <li>Spring 2021: CENG-SHU 202 Computer Architecture</li>
+              <li>Fall 2020: MATH-SHU 235 Probability and Statistics</li>
+              
+              <p><strong>Other:</strong></p>
+              <p>2021-2022: Fablab O Shanghai STEAM Instructor</p>
+            </td>
+          </tr>
+        </table>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:2.5%;width:100%;vertical-align:middle">
+              <h2>Misc</h2>
+              <p> I enjoy doodling! <img style="width:15%;max-width:15%" alt="doodle" src="images/running.jpg"> </p>
+              <p>I'm also a part of the <a style="font-size:small;" href="https://enchord.wordpress.com/">Penn Enchord</a> Acapella Group, check out some of <a style="font-size:small;" href="https://www.youtube.com/@pennenchord9978">our performances</a>!</p>
+            </td>
+          </tr>
+        </table>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:0px">
+              <br>
+              <p style="text-align:center;font-size:small;">
+                Sourced from <a style="font-size:small;" href="https://jonbarron.info">this</a> and <a style="font-size:small;" href="https://leonidk.com/">this</a> template.
+              </p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+
+</html>
+

@@ -1,0 +1,15 @@
+---
+layout: post
+title:  "Bittle Path Finding"
+startdate:   07/2021
+enddate: 08/2021
+image: /images/bittle.png
+categories: "Petoi"
+course: " Bittle Project"
+author: "Yiming Huang"
+code: https://github.com/yh2371/Bittle-Path-Finding
+subtitle: "Path finding and navigation algorithms in a grid environment for the Petoi Robot Dog Bittle"
+---
+
+Path finding and navigation algorithms in a grid environment for the <a href="https://www.petoi.com/products/petoi-bittle-robot-dog">Petoi Robot Dog Bittle</a>
+

@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "Controllability and Interpretability for Text-to-Motion Generation using LLMs"
+date:   2023-01-27 22:21:59 +00:00
+image: /images/knee_bend.gif
+categories: research
+author: "Yiming Huang"
+authors: "Principal Investigators: Prof. Lingjie Liu and Prof. Mark Yatskar" 
+subtitle: ""
+venue: "Ongoing"
+---
+
+Applying LLM priors to improve the controllability and interpretability of text-to-motion generation.

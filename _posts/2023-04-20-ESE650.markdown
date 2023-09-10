@@ -1,0 +1,14 @@
+---
+layout: post
+title:  "Recovery RL for Quadroter Navigation"
+startdate:   02/2023
+enddate: 04/2023
+image: /images/rl.png
+categories: UPenn
+author: "Yiming Huang"
+subtitle: "Navigation Recovery RL"
+code: https://github.com/yh2371/Navigation-Recovery-RL
+course: "ESE 650: Learning in Robotics"
+---
+
+Extension of <a href="https://arxiv.org/abs/2010.15920">Recovery RL: Safe Reinforcement Learning with Learned Recovery Zones" by Thananjeyan et. al</a> to 3D Quadroter navigation tasks.
