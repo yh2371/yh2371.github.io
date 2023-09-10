@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "Robot Arm Block Stacking Challenge"
+startdate:   09/2022
+enddate: 12/2022
+image: /images/gripper2.gif
+categories: UPenn
+author: "Yiming Huang"
+subtitle: "Navigation Recovery RL"
+course: "MEAM 520: Intro to Robotics"
+---
+
+Developed manipulation and planning strategies to control a 7 DOF <a href="https://www.franka.de/">Franka-Emika Panda manipulator arm</a> with vision sensors for April Tag detection to compete in a block stacking challenge.

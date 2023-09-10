@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "Quadroter Maze Navigation"
+startdate:   01/2023
+enddate: 04/2023
+image: /images/quad2.png
+categories: UPenn
+author: "Yiming Huang"
+subtitle: "Navigation Recovery RL"
+course: "MEAM 620: Advanced Robotics"
+---
+
+Implemented a PD Controller, A* Trajectory Planner, min-jerk trajectory generator and VIO state estimator for navigating a <a href="https://www.bitcraze.io/products/old-products/crazyflie-2-0/">CrazyFlie 2.0 quadroter</a> in maze environments.

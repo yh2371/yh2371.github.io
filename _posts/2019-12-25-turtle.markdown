@@ -1,0 +1,14 @@
+---
+layout: post
+title:  "Investigating Fiducial Marker Network Characteristics for Mobile Indoor Robot Navigation"
+startdate:   2020-01-27 22:21:59 +00:00
+image: /images/turtle.gif
+categories: research
+author: "Yiming Huang"
+subtitle: "Poster"
+authors: "<strong>Yiming Huang</strong>, Bharadwaj R. K. Mantha, Borja Garcia de Soto"
+venue: "NYU Shanghai Undergraduate Research Symposium"
+poster: /pdfs/Symposium_poster.jpeg
+---
+
+Implemented and evaluated in simulation a protocal for optimizing April Tag placement during automatic marker-based navigation of a <a href="https://www.turtlebot.com/turtlebot3/">Turtlebot3 Waffle Pi</a>platform.

@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "SICK TiM$10K University Challenge 2022"
+startdate:  12/2022
+enddate: 04/23
+image: /images/tim.gif
+categories: University
+course: " of Pennsylvania"
+subtitle: "Sparse 3D Reconstruction Module with TiM8xx 2D LiDAR, programmed in Python and Lua."
+---
+
+Sparse 3D Reconstruction Module with <a href = "https://www.sick.com/tr/en/lidar-sensors/2d-lidar-sensors/tim/c/g570093">TIM8xx 2D LiDAR</a>, programmed in Python and Lua.
+
