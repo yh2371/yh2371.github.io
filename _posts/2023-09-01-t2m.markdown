@@ -10,4 +10,4 @@ subtitle: ""
 venue: "Ongoing"
 ---
 
-Applying LLM priors to improve the controllability and interpretability of text-to-motion generation.
+Applying LLMs to improve the controllability and interpretability of text-to-motion generation.
