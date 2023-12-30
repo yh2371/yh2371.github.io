@@ -6,7 +6,7 @@ image: /images/turtle.gif
 categories: research
 author: "Yiming Huang"
 subtitle: "Poster"
-authors: "<strong>Yiming Huang</strong>, Bharadwaj R. K. Mantha, Borja Garcia de Soto"
+authors: "<ins><strong>Yiming Huang</strong></ins>, Bharadwaj R. K. Mantha, Borja Garcia de Soto"
 venue: "NYU Shanghai Undergraduate Research Symposium"
 poster: /pdfs/Symposium_poster.jpeg
 ---

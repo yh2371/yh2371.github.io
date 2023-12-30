@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E00L9PT3V9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-E00L9PT3V9');
+  </script>
+  <title>{{ site.name }}</title>
+
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+  <meta name="author" content="{{ site.name }}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  <style>
+    /* Custom styles */
+    body {
+      font-family: 'Lato', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 20px;
+    }
+    .header-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+    .gif {
+      width: 50px;
+      height: 50px;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 20px;
+    }
+    .card {
+      width: 75%;
+      margin-bottom: 20px;
+      padding: 15px;
+      box-sizing: border-box;
+      border-radius: 8px;
+      background-color: #dce0e9; /* pastel gray-blue */
+    }
+    .card-title {
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #333; /* dark text */
+    }
+    .card-description {
+      margin-bottom: 10px;
+      color: #555; /* slightly lighter text */
+    }
+    .iframe-container {
+      width: 75%; /* Take full width */
+      align-items: center;
+    }
+    iframe {
+      width: 100%;
+      height: 100px; /* Adjust height as needed */
+      border: none;
+      border-radius: 8px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="header">
+    <h1 class="header-title">Arrangement Stash</h1>
+    <img style="width:8%;height:auto;" src="../images/yay.gif" alt="GIF" class="gif">
+  </div>
+  <div class="container">
+    <div class="card">
+      <h2 class="card-title">僕が死のうと思ったのは - 中島 美嘉</h2>
+      <p class="card-description">SATB, Penn Enchord Spring 2023</p>
+    </div>
+    <div class="iframe-container">
+      <iframe src="https://drive.google.com/file/d/1xwMhp6BA0-lsFoUeyMgBomwRpkvfrTDD/preview" frameborder="0" allowtransparency="true"></iframe>
+    </div>
+  </div>
+  <div class="container">
+    <div class="card">
+      <h2 class="card-title">Taylor Swift Medley</h2>
+      <p class="card-description">SATB, Penn Enchord Fall 2023, Anti-Hero inspired by <a class="card-description" href="https://www.youtube.com/shorts/OvnssR4zZF4">VoicePlay</a>.</p>
+    </div>
+    <div class="iframe-container">
+      <iframe src="https://drive.google.com/file/d/1aNfVj2_n8xl0yVcZWoZ5mn9l59CWn6QJ/preview" frameborder="0" allowtransparency="true"></iframe>
+    </div>
+  </div>
+  <div class="container">
+    <div class="card">
+      <h2 class="card-title">Flowers x When I Was Your Man x WANNABE - Miley Cyrus/Bruno Mars/ITZY</h2>
+      <p class="card-description">SATB, Penn Enchord Fall 2023, Inspired by <a class="card-description" href="https://www.youtube.com/watch?v=FESkz64l7VM">this</a> amazing mashup from PomplamooseMusic.</p>
+    </div>
+    <div class="iframe-container">
+      <iframe src="https://drive.google.com/file/d/1YRb8oeuHrxfBep0SrRsRsCyfFJVoc5KQ/preview" frameborder="0" allowtransparency="true"></iframe>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+---
+layout: post
+title:  "<a href='http://ego-exo4d-data.org'>Ego-Exo4D: Understanding Skilled Human Activity from First-and Third-Person Perspectives</a>"
+date:   2023-10-20 22:21:59 +00:00
+image: /images/ego-exo4d-logo.png
+categories: research
+author: "Yiming Huang"
+authors: "Kristen Grauman, Andrew Westbury, (et al., including <ins><strong>Yiming Huang</strong></ins>)" 
+subtitle: ""
+venue: "In Submission"
+website: http://ego-exo4d-data.org
+video: https://www.youtube.com/watch?v=GdooXEBAnI8
+arxiv: https://arxiv.org/abs/2311.18259
+---
+
+We present Ego-Exo4D, a diverse, large-scale multimodal multiview video dataset and benchmark challenge, centered around simultaneously-captured egocentric and exocentric video of skilled human activities (e.g., sports, music, dance, bike repair).
