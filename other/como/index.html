@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Controllable Motion Generation and Editing with LLMs">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CoMo: Controllable Motion Generation through Language Guided Pose Code Editing</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+<section class="hero publication-headerr">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">CoMo: <u>Co</u>ntrollable <u>Mo</u>tion Generation through Language Guided Pose Code Editing</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://yh2371.github.io/">Yiming Huang</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://weilinwl.com/">Weilin Wan</a><sup>1,2</sup>,</span>
+            <span class="author-block">
+              <a href="https://yueyang1996.github.io/">Yue Yang</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.cis.upenn.edu/~ccb/">Chris Callison-Burch</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.cis.upenn.edu/~myatskar/">Mark Yatskar</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://lingjie0206.github.io/">Lingjie Liu</a><sup>1</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of Pennsylvania</span>
+            <span class="author-block"><sup>2</sup>The University of Hong Kong</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="../papers/como.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="../papers/como.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/yh2371/como"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/yh2371/como"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-laptop-code"></i>
+                  </span>
+                  <span>Demo</span>
+                  </a>
+              </span>
+              <!-- Email Link. -->
+              <span class="link-block">
+                <a href="mailto: ymhuang9@seas.upenn.edu"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-envelope"></i>
+                  </span>
+                  <span>Email</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/teaser.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">CoMo</span> is a unified framework for fine-grained, text-driven human
+        motion generation and editing.
+      </h2>
+    </div>
+  </div>
+</section>
+<section class="section is-light is-small abs">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Text-to-motion models excel at efficient human motion generation through natural language, while existing approaches lack fine-grained spatiotemporal control over the generation process. Consequently, modifying subtle postures within a motion or inserting new actions at specific moments remains a challenge, limiting the applicability of these methods in diverse scenarios. 
+            In light of these challenges, we introduce <b><span class="dnerf">CoMo</span></b>, a <u>Co</u>ntrollable <u>Mo</u>tion generation model, adept at accurately generating and editing motions by leveraging the knowledge priors of large language models (LLMs). 
+            Specifically, <span class="dnerf">CoMo</span> decomposes motions into discrete and semantically meaningful <i>pose codes</i>, with each code encapsulating the semantics of a body part, representing elementary information such as 'left knee slightly bent'. 
+            Given textual inputs, <span class="dnerf">CoMo</span> autoregressively generates sequences of pose codes, which are then decoded into 3D motions. Leveraging pose codes as interpretable representations, an LLM can directly intervene in motion editing by adjusting the pose codes according to editing instructions. 
+            Our experiments demonstrate that <span class="dnerf">CoMo</span> achieves competitive performance in motion generation compared to state-of-the-art models while surpassing previous work in motion editing, as evaluated through human assessments.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+<section class="section", id="method">
+  <div class="container is-max-desktop">
+    <!-- Method. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-fifths">
+        <h2 class="title is-3">Method</h2>
+        <div class="content has-text-justified">
+          <p>
+            <span class="dnerf">CoMo</span> represents motions as
+<i>pose codes</i>, with each code defining the state of a specific body
+part at a given moment, e.g., "right arm straight". Leveraging pose codes as interpretable motion representations,
+the three main components of <span class="dnerf">CoMo</span> work jointly to effectively
+<b>generate</b> and <b>edit</b> motion: (1) The Motion Encoder-Decoder parses
+motions into sequences of pose codes and reconstructs them back
+into motions by learning a decoder; (2) The Motion Generator, a
+transformer-based model, generates pose codes conditioned on text
+inputs and LLM-generated fine-grained descriptions; (3) The Motion
+Editor uses LLM to modify and refine the pose codes based on editing
+instructions.
+         </p>
+          <!-- Method video. -->
+          <img id="teaser" height="100%" src="./static/videos/como_diagram.png">
+          </img>
+        </div>
+      </div>
+  </div>
+</section>
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-five-fifths">
+          <div class="content has-text-justified">
+            <p><span class="dnerf">CoMo</span> allows for intuitive and precise adjustments
+              to the motion sequences, both temporally and spatially, closely
+              aligning the generated motions with users’ creative intentions and
+              the nuances expressed in their textual descriptions, making the
+              process user-friendly and adaptable to diverse applications.</p>
+          </div>
+        </div>
+    </div>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/kick.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/soccer.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/pickup.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <!-- <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/yoga.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/handstand.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/swag.mp4"
+                    type="video/mp4">
+          </video>
+        </div> -->
+      </div>
+    </div> <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
+    <script>
+        bulmaCarousel.attach('#results-carousel', {
+              slidesToScroll: 1,
+              slidesToShow: 1,
+              loop: true,
+        });
+    </script>
+</div>
+  </div>
+</section>
+<section class="section", id="user">
+  <div class="container is-max-desktop">
+    <!-- User Study. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-fifths">
+        <h2 class="title is-3">Human Evaluation</h2>
+        <div class="content has-text-justified">
+          <p>
+            54 users evaluated motion editing quality for editing scenarios that cover body part modification,
+            add/delete actions edits, speed change and
+            style/emotion change. Results show a clear preference
+            (over 70% on average) for motion editing with <span class="dnerf">CoMo</span> when compared to baselines <a ref="https://mael-zys.github.io/T2M-GPT/">T2M-GPT</a> and <a ref="https://mingyuan-zhang.github.io/projects/FineMoGen.html">FineMoGen</a>. 
+          </p>
+          <!-- User study -->
+        </div>
+        <div text-align="center">
+          <img id="eval" text-align="center" width="70%" padding-bottom="1rem" src="./static/videos/human_eval.png">
+          </img></div>
+      </div>
+  </div>
+  <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Comparison</h2>
+      <div class="content has-text-centered">
+          <p>
+            Humans prefer <span class="dnerf">CoMo</span> for motion editing, especially in
+            scenarios that involve modifying fine-grained motion details.</p>
+      </div>
+      </div>
+      <div class="container is-max-desktop">
+        <div id="results-carousel2" class="carousel results-carousel2">
+          <div class="item item-steve">
+            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/part.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-chair-tp">
+            <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/speed.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-shiba">
+            <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/style.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-fullbody">
+            <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/add.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
+            <script>
+                bulmaCarousel.attach('#results-carousel2', {
+                      slidesToScroll: 1,
+                      slidesToShow: 1,
+                      loop: true,
+                });
+            </script>
+      </div>
+  </div>
+</section>
+<!-- <section class="section">
+  <div class="container is-max-desktop">
+    
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Related Links</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            There's a lot of excellent work that was introduced around the same time as ours.
+          </p>
+          <p>
+            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
+          </p>
+          <p>
+            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
+            both use deformation fields to model non-rigid scenes.
+          </p>
+          <p>
+            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
+          </p>
+          <p>
+            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section> -->
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{xxx,
+  author    = {xxx},
+  title     = {xxx},
+  journal   = {arxiv},
+  year      = {2024},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link" href="../papers/como.pdf" class="external-link" disabled>
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="../papers/como.pdf" class="external-link" disabled>
+        <i class="ai ai-arxiv"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/yh2371/como" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+      <a class="icon-link" href="mailto: ymhuang9@seas.upenn.edu" class="external-link" disabled>
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content", style="text-align: center;">
+          <p>
+            This website was developed by referencing <a href="https://github.com/nerfies/nerfies.github.io">this</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
