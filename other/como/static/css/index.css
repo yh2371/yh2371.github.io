@@ -1,7 +1,88 @@
 body {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Crimson Text', sans-serif;
+  font-size: 22px;
 }
 
+.edit-text {
+  color: green;
+}
+
+.source-text {
+  color: crimson; /* #87CEEB;Sky blue for source text */
+}
+
+
+.dotted-line {
+  border-top: 3px dotted #808080; /* Gray dotted line */
+  margin-top: 0px; /* Adjust the margin as needed */
+  margin-bottom: 20px; /* Adjust the margin as needed */
+  width: 100%;
+}
+
+.dotted-line2 {
+  border-top: 3px dotted #808080; /* Gray dotted line */
+  margin-top: 20px; /* Adjust the margin as needed */
+  margin-bottom: 20px; /* Adjust the margin as needed */
+  width: 100%;
+}
+
+.video-box {
+  width: 30%;
+}
+
+.video-description {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 0.95em;
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 0 10px 15px;
+  margin-top: 6em;
+  border-color: transparent transparent transparent #808080;
+}
+
+.video-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.video {
+  width: 25%;
+  margin-bottom: 20px;
+  padding-left: 0.5%;
+  padding-right: 0.5%;
+}
+
+.video-title {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.row-title {
+  text-align: center;
+  font-size: 0.95em;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.icon-svg {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em; /* Adjust size as needed */
+  height: 1em; /* Adjust size as needed */
+  background-image: url('../images/como.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 0.2em; /*Adjust spacing as needed*/
+}
 
 .footer .icon-link {
     font-size: 25px;
@@ -24,7 +105,7 @@ body {
 }
 
 .teaser {
-  font-family: 'Google Sans', sans-serif;
+  font-family: 'Crimson Text', sans-serif;
 }
 
 
@@ -49,11 +130,11 @@ body {
 }
 
 .publication-title {
-    font-family: 'Google Sans', sans-serif;
+    font-family: 'Crimson Text', sans-serif;
 }
 
 .publication-authors {
-    font-family: 'Google Sans', sans-serif;
+    font-family: 'Crimson Text', sans-serif;
 }
 
 .publication-venue {
