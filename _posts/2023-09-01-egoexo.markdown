@@ -6,8 +6,8 @@ image: /images/ego-exo4d-logo.png
 categories: research
 author: "Yiming Huang"
 authors: "Kristen Grauman, Andrew Westbury, (et al., including <ins><strong>Yiming Huang</strong></ins>)" 
-subtitle: ""
-venue: "In Submission"
+subtitle: " "
+venue: "CVPR 2024 (Oral)"
 website: http://ego-exo4d-data.org
 video: https://www.youtube.com/watch?v=GdooXEBAnI8
 arxiv: https://arxiv.org/abs/2311.18259

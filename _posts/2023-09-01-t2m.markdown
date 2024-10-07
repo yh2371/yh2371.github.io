@@ -1,13 +1,16 @@
 ---
 layout: post
-title:  "Controllability and Interpretability for Text-to-Motion Generation using LLMs"
-date:   2023-01-27 22:21:59 +00:00
-image: /images/knee_bend.gif
+title:  "CoMo: Controllable Motion Generation through Language Guided Pose Code Editing"
+date:   2024-03-27 22:21:59 +00:00
+image: /images/como_demo.gif
 categories: research
 author: "Yiming Huang"
-authors: "Principal Investigators: Prof. Lingjie Liu and Prof. Mark Yatskar" 
-subtitle: ""
-venue: "Ongoing"
+authors: "<ins><strong>Yiming Huang</strong></ins>, Weilin Wan, Yue Yang, Chris Callison-Burch, Mark Yatskar, Lingjie Liu," 
+subtitle: " "
+venue: "ECCV 2024"
+website: https://yh2371.github.io/como/
+arxiv: https://arxiv.org/abs/2403.13900
+code: https://github.com/yh2371/CoMo
 ---
 
-Applying LLMs to improve the controllability and interpretability of text-to-motion generation.
+We present CoMo, a unified framework for fine-grained, text-driven human motion generation and editing using discrete and semantically meaningful pose codes.
