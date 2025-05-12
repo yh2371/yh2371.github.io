@@ -1,57 +1,168 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>ModSkill: Physical Character Modularization</title>
-    <style>
-        body {
-            font-family: 'Courier New', Courier, monospace;
-            background-color: black;
-            text-align: center;
-            color: white;
-            margin: 0;
-            padding: 0;
-        }
+  <meta charset="utf-8">
+  <meta name="description" content="ModSkill: Physical Character Modularization">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ModSkill: Physical Character Modularization</title>
 
-        .container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-        }
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
 
-        h1 {
-            font-size: 50px;
-        }
-
-        p {
-            font-size: 20px;
-            margin-bottom: 20px;
-        }
-
-        .gif-container {
-            margin-top: 20px;
-        }
-
-        .coming-soon-gif {
-            width: 200px;
-            height: auto;
-        }
-    </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
 </head>
 <body>
 
-<div class="container">
-    <h1>Coming Soon</h1>
-    <p>Our project website is under construction. Stay tuned!</p>
-    <div class="gif-container">
-        <img class="coming-soon-gif" src="./static/images/dance.gif">
-    </div>
-</div>
+<section class="hero publication-header">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">ModSkill: Physical Character Modularization</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://yh2371.github.io/">Yiming Huang</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://frank-zy-dou.github.io/">Zhiyang Dou</a><sup>1,2</sup>,</span>
+            <span class="author-block">
+              <a href="https://lingjie0206.github.io/">Lingjie Liu</a><sup>1</sup>
+            </span>
+          </div>
 
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of Pennsylvania, <sup>2</sup>The University of Hong Kong</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2502.14140"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (Coming Soon)</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body" style="text-align: center;">
+      <iframe width="640" height="360" src="https://www.youtube.com/embed/91jo3r38Lr0" frameborder="0" allowfullscreen></iframe>
+      <h2 class="subtitle has-text-justified">
+        We propose a modularized skill learning framework, <span class="dnerf">ModSkill</span>, which incorporates body-part-level inductive bias for motor skill
+acquisition. ModSkill decouples full-body motion into skill embeddings for controlling individual body parts. Learned from large-scale
+motion datasets, these modular skills can be combined to control a simulated character to perform diverse motions and seamlessly reused for various downstream tasks.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section is-light is-small abs">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content is-size-5 has-text-justified">
+          <p>
+            Human motion is highly diverse and dynamic, posing challenges for imitation learning algorithms that aim to generalize motor skills for controlling simulated characters. Prior methods typically rely on a universal full-body controller for tracking reference motion (tracking-based model) or a unified full-body skill embedding space (skill embedding). However, these approaches often struggle to generalize and scale to larger motion datasets. In this work, we introduce a novel skill learning framework, <span class="dnerf" >ModSkill</span>, that decouples complex full-body skills into compositional, modular skills for independent body parts, leveraging body structure-inspired inductive bias to enhance skill learning performance. Our framework features a skill modularization attention mechanism that processes policy observations into modular skill embeddings that guide low-level controllers for each body part. We further propose an Active Skill Learning approach with Generative Adaptive Sampling, using large motion generation models to adaptively enhance policy learning in challenging tracking scenarios. Results show that this modularized skill learning framework, enhanced by generative sampling, outperforms existing methods in precise full-body motion tracking and enables reusable skill embeddings for diverse goal-driven tasks. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section", id="method">
+    <div class="container is-max-desktop">
+      <!-- Method. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-five-fifths">
+          <h2 class="title is-3">Method</h2>
+          <img id="teaser" height="100%" src="./static/images/pipeline.png"></img>  
+          <div class="content is-size-5 has-text-justified">
+            <p>
+              <b>Left</b>: We extract modular skills from a large-scale motion dataset using a motion imitation objective, enabling low-level controllers to control various body parts of a physically simulated character. Active skill learning, through adaptive sampling from an off-the-shelf motion generation model, further enhances policy performance. <b>Right</b>: The learned modular skills can be transferred to downstream tasks by freezing the low-level controllers and training a high-level policy with task-specific rewards.
+           </p>
+            <!-- Method video. -->
+            
+       
+            <!-- <video id="teaser" autoplay muted playsinline height="100%">
+              <source src="./static/videos/como_video_2.mp4"
+                      type="video/mp4">
+            </video> -->
+          </div>
+        </div>
+    </div>
+  </section>
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@misc{huang2025modskillphysicalcharacterskill,
+        title={ModSkill: Physical Character Skill Modularization}, 
+        author={Yiming Huang and Zhiyang Dou and Lingjie Liu},
+        year={2025},
+        eprint={2502.14140},
+        archivePrefix={arXiv},
+        primaryClass={cs.CV},
+        url={https://arxiv.org/abs/2502.14140}, 
+  }</code></pre>
+  <!-- <pre><code>Coming Soon</code></pre> -->
+    </div>
+  </section>
+  
+  
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <!-- <a class="icon-link" href="./" class="external-link" disabled>
+          <i class="fas fa-file-pdf"></i>
+        </a> -->
+        <a class="icon-link" href="https://arxiv.org/abs/2403.13900" class="external-link" disabled>
+          <i class="ai ai-arxiv"></i>
+        </a>
+        <a class="icon-link" href="./" class="external-link" disabled>
+          <i class="fab fa-github"></i>
+        </a>
+        <a class="icon-link" href="mailto: ymhuang9@seas.upenn.edu" class="external-link" disabled>
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content", style="text-align: center;">
+            <p>
+              This website was developed referencing <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

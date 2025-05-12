@@ -1,0 +1,270 @@
+body {
+  font-family: 'Crimson Text', sans-serif;
+  font-size: 22px;
+}
+
+.edit-text {
+  color: green;
+}
+
+.source-text {
+  color: crimson; /* #87CEEB;Sky blue for source text */
+}
+
+
+.dotted-line {
+  border-top: 3px dotted #808080; /* Gray dotted line */
+  margin-top: 0px; /* Adjust the margin as needed */
+  margin-bottom: 20px; /* Adjust the margin as needed */
+  width: 100%;
+}
+
+.dotted-line2 {
+  border-top: 3px dotted #808080; /* Gray dotted line */
+  margin-top: 20px; /* Adjust the margin as needed */
+  margin-bottom: 20px; /* Adjust the margin as needed */
+  width: 100%;
+}
+
+.video-box {
+  width: 30%;
+}
+
+.video-description {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 0.95em;
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 0 10px 15px;
+  margin-top: 6em;
+  border-color: transparent transparent transparent #808080;
+}
+
+.video-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.video {
+  width: 25%;
+  margin-bottom: 20px;
+  padding-left: 0.5%;
+  padding-right: 0.5%;
+}
+
+.video-title {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.row-title {
+  text-align: center;
+  font-size: 0.95em;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.icon-svg {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em; /* Adjust size as needed */
+  height: 1em; /* Adjust size as needed */
+  background-image: url('../images/como.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 0.2em; /*Adjust spacing as needed*/
+}
+
+.footer .icon-link {
+    font-size: 25px;
+    color: #000;
+}
+
+.link-block a {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.dnerf {
+  font-variant: small-caps;
+}
+
+
+.teaser .hero-body {
+  padding-top: 0;
+  padding-bottom: 3rem;
+}
+
+.teaser {
+  font-family: 'Crimson Text', sans-serif;
+}
+
+
+.publication-title {
+}
+
+.publication-banner {
+  max-height: parent;
+
+}
+
+.publication-banner video {
+  position: relative;
+  left: auto;
+  top: auto;
+  transform: none;
+  object-fit: fit;
+}
+
+.publication-header .hero-body {
+  padding-bottom: 0rem;
+}
+
+.publication-title {
+    font-family: 'Crimson Text', sans-serif;
+}
+
+.publication-authors {
+    font-family: 'Crimson Text', sans-serif;
+}
+
+.publication-venue {
+    color: #555;
+    width: fit-content;
+    font-weight: bold;
+}
+
+.publication-awards {
+    color: #ff3860;
+    width: fit-content;
+    font-weight: bolder;
+}
+
+.publication-authors {
+}
+
+.publication-authors a {
+   color: hsl(204, 86%, 53%) !important;
+}
+
+.publication-authors a:hover {
+    text-decoration: underline;
+}
+
+.author-block {
+  display: inline-block;
+}
+
+.publication-banner img {
+}
+
+.publication-authors {
+  /*color: #4286f4;*/
+}
+
+.publication-video {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+
+    overflow: hidden;
+    border-radius: 10px !important;
+}
+
+.publication-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.publication-body img {
+}
+
+.results-carousel {
+  overflow: hidden;
+}
+
+.results-carousel2 {
+  overflow: hidden;
+  width: 100%;
+}
+
+.abs {
+  background: #f5f5f5;
+}
+.results-carousel .item {
+  margin: 5px;
+  overflow: hidden;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  padding: 0;
+  font-size: 0;
+  height: auto;
+  width: 98%;
+  background: white;
+}
+
+.results-carousel2 .item {
+  margin: 5px;
+  overflow: hidden;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  padding: 0;
+  font-size: 0;
+  height: auto;
+  width: 100%;
+  background: white;
+}
+
+.results-carousel video {
+  margin: 0;
+  object-fit: cover;
+  width: 100%;
+}
+
+
+.results-carousel2 video {
+  margin: 0;
+  object-fit: cover;
+  width: 100%;
+}
+
+.interpolation-panel {
+  background: #f5f5f5;
+  border-radius: 10px;
+}
+
+.interpolation-panel .interpolation-image {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.interpolation-video-column {
+}
+
+.interpolation-panel .slider {
+  margin: 0 !important;
+}
+
+.interpolation-panel .slider {
+  margin: 0 !important;
+}
+
+#interpolation-image-wrapper {
+  width: 100%;
+}
+#interpolation-image-wrapper img {
+  border-radius: 5px;
+}
