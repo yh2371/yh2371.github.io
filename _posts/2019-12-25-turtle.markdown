@@ -1,9 +1,11 @@
 ---
 layout: post
 title:  "Investigating Fiducial Marker Network Characteristics for Mobile Indoor Robot Navigation"
-startdate:   2020-01-27 22:21:59 +00:00
+startdate: 09/2019
+enddate:  01/2020
 image: /images/turtle.gif
-categories: research
+categories: NYU
+course: " Abu Dhabi S.M.A.R.T."
 author: "Yiming Huang"
 subtitle: "Poster"
 authors: "<ins><strong>Yiming Huang</strong></ins>, Bharadwaj R. K. Mantha, Borja Garcia de Soto"

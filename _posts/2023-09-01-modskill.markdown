@@ -1,0 +1,15 @@
+---
+layout: post
+title:  "ModSkill: Physical Character Skill Modularization"
+date:   2025-09-17 22:21:59 +00:00
+image: /images/ModSkill.png
+categories: research
+author: "Yiming Huang"
+authors: "<ins><strong>Yiming Huang</strong></ins>, Zhiyang Dou, Lingjie Liu," 
+subtitle: " "
+venue: "ICCV 2025"
+website: https://yh2371.github.io/modskill/
+arxiv: https://arxiv.org/abs/2502.14140
+---
+
+We introduce a novel skill learning framework, ModSkill, that decouples complex full-body skills into compositional, modular skills for independent body parts, leveraging body structure-inspired inductive bias to enhance skill learning performance. 

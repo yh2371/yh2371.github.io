@@ -1,0 +1,15 @@
+---
+layout: post
+title:  "PhysCtrl: Generative Physics for Controllable and Physics-Grounded Video Generation"
+date:   2024-11-28 22:21:59 +00:00
+image: /images/physctrl.png
+categories: research
+author: "Yiming Huang"
+authors: "Chen Wang*, Chuhao Chen*, <ins><strong>Yiming Huang</strong></ins>, Zhiyang Dou, Yuan Liu, Jiatao Gu, Lingjie Liu," 
+subtitle: " "
+venue: "NeurIPS 2025"
+website: https://cwchenwang.github.io/physctrl/
+paper: /https://cwchenwang.github.io/physctrl/static/pdfs/paper.pdf
+---
+
+PhysCtrl achieves controllable and physics-grounded video generation from an initial force input.
